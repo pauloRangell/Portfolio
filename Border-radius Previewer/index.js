@@ -1,12 +1,13 @@
-inputBorderTopLeft = document.querySelector(".border-top-left");
-inputBorderTopRight = document.querySelector(".border-top-right");
-inputBorderBottomLeft = document.querySelector(".border-bottom-left");
-inputBorderBottomRight = document.querySelector(".border-bottom-right");
+inputBTL = document.querySelector(".border-top-left");
+inputBTR = document.querySelector(".border-top-right");
+inputBBL = document.querySelector(".border-bottom-left");
+inputBBR = document.querySelector(".border-bottom-right");
 previewBlock = document.querySelector(".preview-block");
 
-function updateBorderRadius(event){
-    new_value_to_border_radius = event.target.value;
-    
+updateBorderRadius = (event) => {
+    isEmpty = (input) => {
+        return input.value === "" ? 0 : input.value
+    };
+    previewBlock.style.cssText = `border-radius: ${isEmpty(inputBTL)}px ${isEmpty(inputBTR)}px ${isEmpty(inputBBR)}px ${isEmpty(inputBBL)}px;`;
 };
-
-
+document.addEventListener("input", updateBorderRadius);
