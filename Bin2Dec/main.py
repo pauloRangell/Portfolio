@@ -20,7 +20,7 @@ def main(page: ft.Page):
         elif input_is_not_binary:
             output.value = "Binary numbers are composed just by 1's and 0's."
         else:
-            decimal_form = sum(starmap(lambda index, digit: int(digit) * 2 ** ((len(input) - 1) - index),enumerate(input[::-1])))
+            decimal_form = sum(starmap(lambda index, digit: int(digit) * 2 ** ((len(input) - 1) - index),enumerate(input)))
             output.value = f"This binary number in decimal is {decimal_form}"
         page.update()
         
