@@ -1,0 +1,35 @@
+body{
+    background-color: #808080;
+}
+
+.preview-block{
+    background-color: #000000;
+    width:350px;
+    height:350px;
+    grid-area:preview-block;
+}
+
+
+.main-surface{
+    display:grid;
+    grid-template-columns:3;
+    grid-template-rows:3;
+    grid-template-areas:
+    "top-left top-middle top-right"
+    "middle-left preview-block middle-right"
+    "bottom-left bottom-middle bottom-right"
+    ;
+}
+
+.border-top-left {
+    grid-area: top-left;
+}
+.border-top-right{
+    grid-area: top-right;
+}
+.border-bottom-left{
+    grid-area: bottom-left;
+}
+.border-bottom-right{
+    grid-area: bottom-right;
+}
