@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Border-radius previewer</title>
 </head>
+
 <body>
-  
-    <main class="main-surface">
-    
-        <div class="preview-block"></div>
-        
-        <input type="number" class="border-top-left">
-        <input type="number" class="border-top-right">
-        <input type="number" class="border-bottom-left">
-        <input type="number" class="border-bottom-right">
-  
-    </main>
+    <div class="center">
+        <span class="title">Border radius previewer</span>
+    </div>
+    <div class="center">
+
+        <div class="previewer">
+            <div class="preview-block"></div>
+
+            <input type="number" class="border-top-left input">
+            <input type="number" class="border-top-right input">
+            <input type="number" class="border-bottom-left input">
+            <input type="number" class="border-bottom-right input">
+        </div>
+
+
+
+    </div>
+    <div class="center reset-buttom">
+        <span class="text-buttom">Reset</span> <span class="copy-buttom text-buttom">Copy</span>
+    </div>
     <script src="index.js"></script>
 </body>
+
 </html>
